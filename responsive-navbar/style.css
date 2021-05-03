@@ -1,0 +1,96 @@
+:root {
+  /* color */
+  --text-color: #f0f4f5;
+  --background-color: #263343;
+  --accent-color: #d49466;
+  /* size */
+  --font-size: 24px;
+}
+body {
+  margin: 0;
+  font-family: "Source Sans Pro";
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 8px 12px;
+}
+
+.nav__logo {
+  font-size: var(--font-size);
+  color: var(--text-color);
+}
+
+.nav__logo i {
+  color: var(--accent-color);
+}
+.nav__menu {
+  display: flex;
+  list-style: none;
+  padding-left: 0px;
+}
+.nav__menu li {
+  padding: 8px 12px;
+}
+.nav__menu li:hover {
+  background-color: var(--accent-color);
+  border-radius: 4px;
+}
+.nav__icons {
+  display: flex;
+  padding-left: 0;
+  list-style: none;
+  color: var(--text-color);
+}
+.nav__icons li {
+  padding: 8px 12px;
+}
+.nav__toggleBtn {
+  /* display:none을 지정함으로써 기본적으로는 토글 버튼이 화면에 나오지 않게 함. */
+  display: none;
+  position: absolute;
+  right: 32px;
+  font-size: var(--font-size);
+  color: var(--accent-color);
+}
+
+/* 미디어 쿼리를 사용한 반응형 디자인 */
+/* 최소 너비가  768px일 때, 아래와 같이 레이아웃을 재정렬한다. */
+@media screen and (max-width: 768px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 24px;
+  }
+  .nav__menu {
+    /* none 값을 이용하여 요소를 보이지 않게 설정 */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .nav__menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .nav__icons {
+    display: none;
+    justify-content: center;
+    width: 100%;
+  }
+  .nav__toggleBtn {
+    display: block;
+  }
+
+  /* toggle이 click되었을 때*/
+  .nav__menu.active,
+  .nav__icons.active {
+    display: flex;
+  }
+}
