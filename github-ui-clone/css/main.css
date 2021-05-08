@@ -4,3 +4,54 @@
   font-weight: 400;
   font-family: "Roboto", sans-serif;
 }
+
+/* HEADER */
+header {
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+}
+header .wrapper {
+  /* wrapper의 최대 가로 너비 */
+  max-width: 980px;
+  height: 78px;
+  /* 가운데 정렬 */
+  /* margin:auto를 사용하려면 가로 width가 있어야 한다. */
+  margin: 0 auto;
+}
+
+header .menu-group {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+header .logo {
+  margin-right: 10px;
+}
+header .logo a {
+  /* a태그는 inline */
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/logo.svg");
+  /* 들여쓰기 */
+  text-indent: -9999px;
+}
+header .logo a:hover {
+  background-image: url("../img/logo_on.svg");
+}
+header .main-menu {
+  display: flex;
+}
+
+header .main-menu li a {
+  /* inline style인 a 태그는 위, 아래(padding)를 가질 수 없다. 
+  so, display:block 옵션 설정 */
+  display: block;
+  padding: 10px;
+  color: #3c4146;
+}
+
+header .main-menu li a:hover {
+  color: #4078c5;
+}
