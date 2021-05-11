@@ -54,9 +54,10 @@
   <div class="body__container">
     <!-- HEADER -->
     <header class="section">
-      <div class="wrapper">
-        <!-- CATEGORY MENU GROUP -->
-        <div class="menu-group">
+      <div class="wrapper clearfix">
+
+        <!-- HEADER / LEFT GROUP  -->
+        <div class="menu-group float--left">
           <div class="logo">
             <a href="#">GitHub</a>
           </div>
@@ -68,10 +69,29 @@
           </ul>
         </div>
 
+        <!-- HEADER / RIGHT GROUP -->
+        <!-- 반응형 작업을 고려해서 (버튼-검색-메뉴) 순으로 작업 -->
+        <div class="sign-group float--right">
+          <div class="btn-group">
+            <a href="#" class="btn sign-in">Sign in</a>
+            <a href="#" class="btn btn--primary sign-up">Sign Up</a>
+          </div>
+          <form class="search-form" method="POST" action="">
+            <input class="search input--text" type="text" placeholder="Search GitHub">
+            <input type="submit" value="Submit">
+          </form>
+          <ul class="sub-menu">
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Support</a></li>
+          </ul>
+        </div>
       </div>
   </div>
   </div>
   </header>
+
+  <!-- VISUAL SECTIONYU -->
   </div>
 </body>
 

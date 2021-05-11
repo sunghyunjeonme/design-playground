@@ -1,8 +1,79 @@
+/* COMMON */
 .body__container {
   color: #333;
   font-size: 16px;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+
+/* FLOAT CLEARFIX */
+
+.clearfix::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.float--left {
+  float: left;
+}
+.float--right {
+  float: right;
+}
+
+/* BTN */
+.btn {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  padding: 0 12px;
+  height: 34px;
+
+  color: #333;
+  background: #eee linear-gradient(to bottom, #fcfcfc, #eee);
+  border: 1px solid #d5d5d5;
+  border-radius: 4px;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.btn:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 15;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.07);
+}
+
+/* INPUT TEXT */
+.input--text {
+  height: 34px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  outline: none;
+  font-size: 16px;
+}
+.input--text:focus {
+  border-color: #51a7e8;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075),
+    0 0 5px rgba(81, 167, 232, 0.5);
+}
+
+.btn.btn--primary {
+  border: 1px solid #65b836;
+  color: #fff;
+  background: #55a532 linear-gradient(#91dd70, #55ae2e);
 }
 
 /* HEADER */
@@ -54,4 +125,47 @@ header .main-menu li a {
 
 header .main-menu li a:hover {
   color: #4078c5;
+}
+
+/* order를 이용해서 순서를 역순으로  */
+header .sign-group {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+header .btn-group {
+  display: flex;
+  order: 2;
+}
+
+header .btn-group .sign-in {
+  margin-right: 4px;
+}
+
+header .search-form {
+  margin-right: 12px;
+  order: 1;
+}
+header .search {
+  width: 160px;
+  font-size: 14px;
+}
+/* submit 버튼을 css로 숨기려고 했을 때, 일일이 클래스를 지정하면 번거롭기 때문에 형제 요소 선택자와 속성 선택자를 사용 */
+header .search + [type="submit"] {
+  display: none;
+}
+header .sub-menu {
+  display: flex;
+}
+
+header .sub-menu li a {
+  display: block;
+  padding: 8px;
+  color: #3c4146;
+  font-size: 13px;
+}
+
+header .sub-menu li a:hover {
+  color: #4078c0;
 }
