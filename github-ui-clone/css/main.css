@@ -515,6 +515,10 @@ footer .logo:hover svg {
   header .toggle {
     display: none;
   }
+  header .toggle.on {
+    /* 만약 toggle 버튼이 생긴다면 다시 화면에 나타나게 */
+    display: block;
+  }
 
   header .toggle-btn {
     display: block;
@@ -524,5 +528,58 @@ footer .logo:hover svg {
     top: 16px;
     right: 20px;
     cursor: pointer;
+  }
+
+  /* VISUAL */
+  .section--visual {
+    background-image: url("../img//bg-small.jpg");
+  }
+  .section--visual .wrapper {
+    display: block;
+    max-width: none;
+    padding: 80px 20px;
+  }
+  .section--visual .summary {
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+  .section--visual .sign-form {
+    width: auto;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  /* FEATURE */
+  .section--feature .summary {
+    padding: 66px 20px 0 20px;
+  }
+  .section--feature .tiles li {
+    width: 50%;
+  }
+  .section--feature .tiles li:nth-child(2) {
+    border-right: none;
+  }
+  .section--feature .tiles li img {
+    padding: 14px 30% 24px;
+  }
+
+  /* WHERE IS */
+  .section--where-is .wrapper {
+    max-width: none;
+    padding: 80px 20px 0 20px;
+  }
+  /* PRICING CARD */
+  .section--pricing .wrapper {
+    max-width: none;
+  }
+  .section--pricing .card .cell2 {
+    font-size: 20px;
+  }
+  /* FOOTER */
+  footer .wrapper {
+    padding: 50px 20px;
+  }
+  footer .logo {
+    display: none;
   }
 }

@@ -1,0 +1,141 @@
+/* 반응형 작업 */
+@media (max-width: 1024px) {
+  /* 우선 순위 문제로 인해 일치 선택자를 사용 */
+  header.section .wrapper {
+    /* 기존 header .wrapper에 있던 max-width 초기화 */
+    max-width: none;
+    /* height는 그 안에 들어있는 content 내용에 맞게 늘어날 수 있도록 */
+    height: auto;
+    padding: 0 20px;
+  }
+  header .menu-group,
+  header .sign-group {
+    /* float 초기화 */
+    float: none;
+  }
+
+  /* menu-group 반응형 */
+
+  header .menu-group {
+    display: block;
+  }
+
+  header .main-menu {
+    display: block;
+    margin-bottom: 10px;
+  }
+  header .logo {
+    padding: 12px 0;
+  }
+
+  header .main-menu li {
+    border-top: 1px solid #e5e5e5;
+  }
+
+  header .main-menu li a {
+    padding: 16px 0;
+  }
+
+  /* sign-group 반응형 */
+  header .sign-group {
+    display: block;
+    padding: 10px 0 20px;
+  }
+
+  header .btn-group {
+    display: block;
+  }
+
+  header .btn-group .btn {
+    justify-content: center;
+  }
+  header .btn-group .sign-in {
+    margin-bottom: 12px;
+    margin-right: 0;
+  }
+
+  header .search-form {
+    margin-top: 10px;
+    margin-right: 0;
+  }
+  header .search {
+    width: 100%;
+    height: 42px;
+    text-align: center;
+  }
+  header .sub-menu {
+    justify-content: center;
+    margin-top: 12px;
+    margin-right: 0;
+  }
+  header .toggle {
+    display: none;
+  }
+  header .toggle.on {
+    /* 만약 toggle 버튼이 생긴다면 다시 화면에 나타나게 */
+    display: block;
+  }
+
+  header .toggle-btn {
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 24px;
+    top: 16px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  /* VISUAL */
+  .section--visual {
+    background-image: url("../img//bg-small.jpg");
+  }
+  .section--visual .wrapper {
+    display: block;
+    max-width: none;
+    padding: 80px 20px;
+  }
+  .section--visual .summary {
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 50px;
+  }
+  .section--visual .sign-form {
+    width: auto;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  /* FEATURE */
+  .section--feature .summary {
+    padding: 66px 20px 0 20px;
+  }
+  .section--feature .tiles li {
+    width: 50%;
+  }
+  .section--feature .tiles li:nth-child(2) {
+    border-right: none;
+  }
+  .section--feature .tiles li img {
+    padding: 14px 30% 24px;
+  }
+
+  /* WHERE IS */
+  .section--where-is .wrapper {
+    max-width: none;
+    padding: 80px 20px 0 20px;
+  }
+  /* PRICING CARD */
+  .section--pricing .wrapper {
+    max-width: none;
+  }
+  .section--pricing .card .cell2 {
+    font-size: 20px;
+  }
+  /* FOOTER */
+  footer .wrapper {
+    padding: 50px 20px;
+  }
+  footer .logo {
+    display: none;
+  }
+}

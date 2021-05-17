@@ -1,0 +1,49 @@
+/* COMMON */
+.summary__title {
+  font-size: 34px !important;
+}
+
+.summary__description {
+  font-size: 20px;
+}
+
+/* FEATURE */
+
+.section--feature .tiles li {
+  width: 100%;
+  border-right: none;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* WHERE IS */
+
+.section--where-is .map {
+  width: auto;
+  margin: 40px -20px 0 -20px;
+  border-left: none;
+  border-right: none;
+}
+
+/* PRICING */
+.section--pricing .card {
+  display: block;
+}
+
+.section--pricing .card .cell2 {
+  border-top: 1px solid #e5e5e5;
+  border-left: none;
+}
+
+/* FOOTER */
+footer .footer-links {
+  display: block;
+  float: none;
+  text-align: center;
+}
+
+footer .footer-links li {
+  display: inline;
+}
+footer .footer-links:first-child {
+  margin-bottom: 20px;
+}
